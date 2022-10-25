@@ -25,7 +25,7 @@ const Home = ({ pageInfo, skills, projects, socials }: Props) => {
   return (
     <div
       className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-scroll 
-        z-0 overflow-y-scroll overflow-x-hidden scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#0e7994]/80"
+        z-0 overflow-y-scroll overflow-x-hidden scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#0e7994]/80 scroll-smooth"
     >
       <Head>
         <title>Wilmer Lopez ~ Desarrollador Web</title>
@@ -60,24 +60,20 @@ const Home = ({ pageInfo, skills, projects, socials }: Props) => {
         <Hero pageInfo={pageInfo} />
       </section>
 
-      {/*About*/}
       <section id="about" className="snap-center">
-        <About />
+        <About pageInfo={pageInfo} />
       </section>
 
-      {/*Skills*/}
       <section id="skills" className="snap-center">
-        <Skills />
+        <Skills skills={skills} />
       </section>
 
-      {/*Projects*/}
       <section id="projects" className="snap-start">
-        <Projects />
+        <Projects projects={projects} />
       </section>
 
-      {/*Contact*/}
       <section id="contact" className="snap-start">
-        <ContactMe />
+        <ContactMe pageInfo={pageInfo} />
       </section>
 
       <Footer />

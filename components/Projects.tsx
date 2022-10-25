@@ -1,10 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Project } from "../typings";
+import { urlFor } from "../sanity";
 
-type Props = {};
+type Props = {
+  projects: Project[];
+};
 
-export default function Projects({}: Props) {
-  const projects = [1, 2, 3, 4];
+export default function Projects({ projects }: Props) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -13,12 +16,12 @@ export default function Projects({}: Props) {
       className="flex overflow-hidden flex-col relative h-screen text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
     >
       <h3 className="absolute top-24 uppercase tracking-[18px] text-gray-500 text-2xl">
-        Projects
+        Proyectos
       </h3>
       <div className="relative px-16 w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#0e7994]/80">
-        {projects.map((project, i) => (
+        {projects?.map((project, i) => (
           <div
-            key={project}
+            key={project._id}
             className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
           >
             <motion.img
@@ -26,22 +29,27 @@ export default function Projects({}: Props) {
               transition={{ duration: 1.2 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              src=""
-              alt=""
+              className="w-2/4"
+              src={urlFor(project?.projectImage).url()}
+              alt="Imagen de projecto"
             />
 
             <div className="space-y-4 px-0 md:p-10 max-w-6xl">
               <h4 className="text-4xl font-semibold text-center">
-                <span className="underline decoration-[#139dc0]/40 ">
-                  Caso de estudio {i + 1}
-                </span>
+                {project?.title}
               </h4>
+              <div className="flex items-center space-x-2 justify-center">
+                {project?.technologies.map((technology) => (
+                  <img
+                    className="h-6 w-6"
+                    key={technology._id}
+                    src={urlFor(technology?.skillImage).url()}
+                    alt="Tecnologias"
+                  />
+                ))}
+              </div>
               <p className="text-lg text-center md:text-left">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                sit amet vestibulum magna, et pharetra arcu. Vivamus non massa
-                magna. Nam vitae dignissim ante, sit amet aliquam nulla. Nam sed
-                odio odio. Cras elementum venenatis lacinia. Donec interdum
-                ligula a porttitor gravida. Vestibulum fermentum, sem eget{" "}
+                {project?.summary}
               </p>
             </div>
           </div>

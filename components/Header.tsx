@@ -2,6 +2,7 @@ import React from "react";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
 import { Social } from "../typings";
+import Link from "next/link";
 
 type Props = {
   socials: Social[];
@@ -33,15 +34,19 @@ export default function Header({ socials }: Props) {
         transition={{ duration: 1.2 }}
         className="flex flex-row items-center text-gray-300 cursor-pointer"
       >
-        <SocialIcon
-          target="_blank"
-          url="mailto:wilmerlopezcespedes@gmail.com"
-          fgColor="gray"
-          bgColor="transparent"
-        />
-        <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
-          Contactarme
-        </p>
+        <Link href="#contact">
+          <div>
+            <SocialIcon
+              className="cursor-pointer"
+              network="email"
+              fgColor="gray"
+              bgColor="transparent"
+            />
+            <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
+              Contactarme
+            </p>
+          </div>
+        </Link>
       </motion.div>
     </header>
   );

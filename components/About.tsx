@@ -2,10 +2,17 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Me from "../img/alsome.jpg";
+import { PageInfo } from "../typings";
+import { sanityClient } from "../sanity";
+import { useNextSanityImage } from "next-sanity-image";
 
-type Props = {};
+type Props = {
+  pageInfo: PageInfo;
+};
 
-export default function About({}: Props) {
+export default function About({ pageInfo }: Props) {
+  const imageProps = useNextSanityImage(sanityClient, pageInfo?.profilePic);
+
   return (
     <div className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-1 space-y-6 justify-evenly mx-auto items-center ">
       <h3 className="absolute top-24 uppercase tracking-[18px] text-gray-500 text-2xl">
@@ -19,7 +26,7 @@ export default function About({}: Props) {
         className="-mb-20 md:mb-0 flex-shrink-0 w-48 h-36 md:w-64 md:h-96 object-cover xl:w-[400px] xl:h-[500px]"
       >
         <Image
-          src={Me}
+          {...imageProps}
           alt="Foto sobre mi"
           className="rounded-full md:rounded-lg"
         />
@@ -30,16 +37,7 @@ export default function About({}: Props) {
           <span className="underline decoration-[#0e7994]">poco</span> sobre mi
         </h4>
         <p className="text-xs md:text-xl text-justify">
-          ¡Hola de nuevo! Como lo mencioné antes mi nombre es Wilmer.
-          Actualmente estoy estudiando informática empresarial en la Universidad
-          de Costa Rica. También me gradué de 4Geeks Academy como desarrollador
-          de software full stack. Me he enfocado en prepararme para trabajar
-          principalmente en el frontend pero también en el backend con algunas
-          de las tecnologías y herramientas más utilizadas en la actualidad. Me
-          encanta seguir aprendiendo, por lo tanto, intento mantenerme
-          actualizado o al menos pendiente de las tendencias tecnológicas.
-          Aparte de programar, en mi tiempo libre realizo actividades como
-          realizar ejercicio, jugar video juegos, escuchar música.
+          {pageInfo?.backgroundInformation}
         </p>
       </div>
     </div>
