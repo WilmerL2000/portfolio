@@ -4,9 +4,10 @@ import Link from "next/link";
 import About from "../components/About";
 import ContactMe from "../components/ContactMe";
 import Footer from "../components/Footer";
-import Header from "../components/Header";
+import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Projects from "../components/Projects";
+import Sidebar from "../components/Sidebar";
 import Skills from "../components/Skills";
 import { PageInfo, Project, Skill, Social } from "../typings";
 import { fetchPageInfo } from "../utils/fetchPageInfo";
@@ -24,8 +25,8 @@ type Props = {
 const Home = ({ pageInfo, skills, projects, socials }: Props) => {
   return (
     <div
-      className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-scroll 
-        z-0 overflow-y-scroll overflow-x-hidden scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#0e7994]/80 scroll-smooth"
+      className="bg-[rgb(36,36,36)] text-white h-screen overflow-scroll 
+        z-0 overflow-y-scroll overflow-x-hidden snap scrollbar-thin sm:scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#0e7994]/80 scroll-smooth"
     >
       <Head>
         <title>Wilmer Lopez ~ Desarrollador Web</title>
@@ -53,30 +54,39 @@ const Home = ({ pageInfo, skills, projects, socials }: Props) => {
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div className="">
+        <Navbar />
+        <div className="flex flex-col">
+          <div className="flex-1">
+            <div className="md:px-36 px-2">
+              <section id="hero">
+                <Hero pageInfo={pageInfo} />
+              </section>
 
-      <Header socials={socials} />
+              <section id="about">
+                <About pageInfo={pageInfo} />
+              </section>
 
-      <section id="hero" className="snap-start">
-        <Hero pageInfo={pageInfo} />
-      </section>
+              <section id="skills">
+                <Skills skills={skills} />
+              </section>
 
-      <section id="about" className="snap-center">
-        <About pageInfo={pageInfo} />
-      </section>
+              <section id="projects">
+                <Projects projects={projects} />
+              </section>
 
-      <section id="skills" className="snap-center">
-        <Skills skills={skills} />
-      </section>
+              <section id="contact">
+                <ContactMe pageInfo={pageInfo} />
+              </section>
+            </div>
+          </div>
+          <div className="md:fixed md:left-0 md:h-screen md:flex items-center justify-center">
+            <Sidebar socials={socials} />
+          </div>
+        </div>
 
-      <section id="projects" className="snap-start">
-        <Projects projects={projects} />
-      </section>
-
-      <section id="contact" className="snap-start">
-        <ContactMe pageInfo={pageInfo} />
-      </section>
-
-      <Footer />
+        <Footer />
+      </div>
     </div>
   );
 };

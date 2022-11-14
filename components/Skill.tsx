@@ -15,11 +15,11 @@ export default function Skill({ skill }: Props) {
         transition={{ duration: 1 }}
         whileInView={{ opacity: 1, x: 0 }}
         src={urlFor(skill?.skillImage).url()}
-        className="rounded-3xl boder border-gray-500 object-cover h-24 w-24 md:w-28 md:h-28 xl:w-32 xl:h-32 filter group-hover:grayscale transition duration-300 ease-in-out"
+        className="rounded-3xl boder border-gray-500 object-cover h-16 w-16 md:w-20 md:h-20 xl:w-28 xl:h-28 filter group-hover:grayscale transition duration-300 ease-in-out"
       />
-      <div className="absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-white h-24 w-24 md:w-28 md:h-28 xl:w-32 xl:h-32 rounded-3xl">
+      <div className="absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-white h-16 w-16 md:w-20 md:h-20 xl:w-28 xl:h-28 rounded-3xl">
         <div className="flex items-center justify-center h-full">
-          <p className="text-xl font-bold text-black opacity-100">
+          <p className="text-sm md:text-xl font-bold text-black opacity-100 text-center">
             {skill?.title}
           </p>
         </div>

@@ -15,7 +15,7 @@ export default function Hero({ pageInfo }: Props) {
   const imageProps = useNextSanityImage(sanityClient, pageInfo?.heroImage);
 
   return (
-    <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
+    <div className="flex h-screen md:mt-7 flex-col space-y-8 items-center justify-center text-center overflow-hidden">
       <BackgroundCircles />
       <Image
         className="relative rounded-full mx-auto object-cover"
@@ -24,7 +24,7 @@ export default function Hero({ pageInfo }: Props) {
         height={195}
         alt="Logotipo"
       />
-      <div className="z-20">
+      <div className="z-10 relative">
         <h2 className="text-sm md:text-2xl uppercase text-gray-500 pb-2 tracking-[15px]">
           {pageInfo?.role}
         </h2>
@@ -42,20 +42,6 @@ export default function Hero({ pageInfo }: Props) {
             ]}
           />
         </h1>
-        <div className="pt-5">
-          <Link href="#about">
-            <button className="heroButton">Sobre mi</button>
-          </Link>
-          <Link href="#skills">
-            <button className="heroButton">Habilidades</button>
-          </Link>
-          <Link href="#projects">
-            <button className="heroButton">Proyectos</button>
-          </Link>
-          <Link href="#contact">
-            <button className="heroButton">Contacto</button>
-          </Link>
-        </div>
       </div>
     </div>
   );
