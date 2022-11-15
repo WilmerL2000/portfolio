@@ -23,7 +23,7 @@ export default function About({ pageInfo }: Props) {
         transition={{ duration: 1.2 }}
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true }}
-        className="-mb-20 md:mb-0 flex-shrink-0 w-48 h-36 md:w-56 md:h-56 object-cover xl:w-[400px] xl:h-[500px]"
+        className="-mb-20 md:mb-0 flex-shrink-0 w-48 h-36 md:w-56 md:h-56 object-cover xl:w-[300px] xl:h-[330px]"
       >
         <Image
           {...imageProps}

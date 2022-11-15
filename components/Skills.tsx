@@ -24,7 +24,7 @@ export default function Skills({ skills }: Props) {
             Algunas tecnologías y herramientas que he empleado
           </h3>
         </div>
-        <div className="grid grid-cols-3 md:grid-cols-7 gap-3 md:gap-8">
+        <div className="grid grid-cols-3 md:grid-cols-7 gap-3 md:gap-8 ml-4 sm:ml-0">
           {skills?.map((skill) => (
             <Skill key={skill._id} skill={skill} />
           ))}
