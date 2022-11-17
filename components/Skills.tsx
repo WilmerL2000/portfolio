@@ -1,7 +1,7 @@
 import React from "react";
-import Skill from "./Skill";
 import { motion } from "framer-motion";
 import { Skill as SkillType } from "../typings";
+import Skill from "./Skill";
 
 type Props = {
   skills: SkillType[];
@@ -13,7 +13,7 @@ export default function Skills({ skills }: Props) {
       initial={{ opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="flex flex-col h-screen text-center md:text-left md:flex-row max-w-[2000px] justify-center xl:space-y-0 mx-auto items-center"
+      className="flex flex-col h-screen mt-20 text-center md:text-left md:flex-row max-w-[2000px] justify-center xl:space-y-0 mx-auto items-center"
     >
       <div className="pl-2 sm:ml-0">
         <div className="mb-12 text-center">

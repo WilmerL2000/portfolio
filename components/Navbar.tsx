@@ -1,16 +1,8 @@
 import React, { useState } from "react";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
-import { Social } from "../typings";
 import Link from "next/link";
-import { Fragment } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
-import {
-  Bars3Icon,
-  XMarkIcon,
-  ChevronDownIcon,
-  BellAlertIcon,
-} from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Logo from "../public/Logo2.png";
 
@@ -38,41 +30,58 @@ export default function Header({}: Props) {
         transition={{ duration: 1.5 }}
         className="flex flex-row items-center"
       >
-        {/* <Link href="#hero" className="cursor-pointer"> */}
         <Image src={Logo} alt="" width={50} height={40} />
-        {/* </Link> */}
       </motion.div>
       <div
         onClick={() => setOpen(!open)}
         className="text-3xl absolute right-8 py-1 cursor-pointer sm:hidden"
       >
         {open ? (
-          <XMarkIcon className="h-8 w-8 text-white hover:text-[#0e7994]" />
+          <XMarkIcon className="h-8 w-8 text-white rounded-full hover:text-[#0e7994]" />
         ) : (
-          <Bars3Icon className="h-8 w-8 text-white hover:text-[#0e7994]" />
+          <Bars3Icon className="h-8 w-8 text-white rounded-full hover:text-[#0e7994]" />
         )}
       </div>
       <ul
-        className={`md:flex h-screen sm:h-0 md:items-center md:pb-0 my-8 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 backdrop-blur-md backdrop-brightness-75 ${
+        className={`sm:flex h-screen sm:h-0 sm:items-center md:pb-0 my-8 absolute sm:static md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 backdrop-blur-md backdrop-brightness-75 ${
           open ? "top-14 transition-all delay-150" : "top-[-490px]"
         } motion-safe:animate-pulse`}
       >
-        <li className="md:ml-4 text-xl md:my-0 relative flex flex-col md:flex-row md:w-auto sm:w-32 gap-4 space-y-8 sm:space-y-0">
+        <li className="sm:ml-12 md:ml-4 text-xl sm:my-0 relative sm:flex sm:flex-row hidden sm:w-auto gap-4 sm:space-y-0">
           {links.map(({ href, label }) => (
             <Link href={href} key={label}>
-              <button
-                className="heroButton transform hover:-translate-y-3 sm:hover:-translate-y-0 text-white"
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.1 }}
+                className="heroButton text-white"
+              >
+                {label}
+              </motion.button>
+            </Link>
+          ))}
+        </li>
+        <li className="md:ml-4 text-xl sm:hidden md:my-0 relative flex flex-col md:w-auto sm:w-32 gap-4 space-y-8 sm:space-y-0">
+          {links.map(({ href, label }) => (
+            <Link href={href} key={label}>
+              <motion.button
+                whileHover={{ scale: 1.3 }}
+                transition={{ duration: 0.1 }}
+                className="heroButton text-white"
                 onClick={() => setOpen(!open)}
               >
                 {label}
-              </button>
+              </motion.button>
             </Link>
           ))}
           <div className="cursor-pointer" onClick={() => setOpen(!open)}>
             <Link href="#contact">
-              <p className=" heroButton transform hover:-translate-y-3 sm:hover:-translate-y-0 text-center text-sm text-white">
+              <motion.p
+                whileHover={{ scale: 1.3 }}
+                transition={{ duration: 0.3 }}
+                className=" heroButton text-center text-sm text-white"
+              >
                 Contactarme
-              </p>
+              </motion.p>
             </Link>
           </div>
         </li>

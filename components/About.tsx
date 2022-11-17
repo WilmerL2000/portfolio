@@ -1,10 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Me from "../img/alsome.jpg";
-import { PageInfo } from "../typings";
-import { sanityClient } from "../sanity";
 import { useNextSanityImage } from "next-sanity-image";
+import { sanityClient } from "../sanity";
+import { PageInfo } from "../typings";
 
 type Props = {
   pageInfo: PageInfo;
@@ -31,7 +30,7 @@ export default function About({ pageInfo }: Props) {
           className="rounded-full md:rounded-lg"
         />
       </motion.div>
-      <div className="px-4 md:px-10 py-3">
+      <div className="px-6 md:px-10 py-3">
         <p className="text-xs md:text-xl text-justify">
           {pageInfo?.backgroundInformation}
         </p>

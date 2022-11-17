@@ -15,26 +15,26 @@ export default function ContactMe({ pageInfo }: Props) {
       </h3>
       <div className="flex flex-col space-y-10">
         <h4 className="text-xl md:text-4xl font-semibold text-center">
-          Si tienes alguna pregunta,{" "}
-          <span className="decoration-[#0e7994]/50 underline uppercase">
-            Contáctame.
-          </span>
+          Si tienes alguna pregunta...{" "}
+          <span className="decoration-[#0e7994]/50 underline">Contáctame</span>
         </h4>
-        <div className="space-y-10">
-          <div className="flex items-center space-x-5 justify-center">
-            <PhoneIcon className="text-[#0e7994] h-7 w-7 animate-pulse" />
-            <p className="text-xl sm:text-2xl">
-              <Link href="https://wa.me/50684360071" target="_blank">
-                {pageInfo?.phoneNumber}
-              </Link>
-            </p>
+        <div className="space-y-10 p-">
+          <div className="cursor-pointer">
+            <Link href="https://wa.me/50684360071" target="_blank">
+              <div className="flex items-center space-x-5 justify-center">
+                <PhoneIcon className="text-[#0e7994] h-7 w-7 animate-pulse" />
+                <p className="text-xl sm:text-2xl">{pageInfo?.phoneNumber}</p>
+              </div>
+            </Link>
           </div>
-          <div className="flex items-center space-x-5 justify-center">
-            <EnvelopeIcon className="text-[#0e7994] h-7 w-7 animate-pulse" />
+          <div className="cursor-pointer">
             <Link href="mailto:wilmerlopezcespedes@gmail.com">
-              <p className="text-lg sm:text-2xl cursor-pointer">
-                {pageInfo?.email}
-              </p>
+              <div className="flex items-center space-x-5 justify-center">
+                <EnvelopeIcon className="text-[#0e7994] h-7 w-7 animate-pulse" />
+                <p className="text-lg sm:text-2xl cursor-pointer">
+                  {pageInfo?.email}
+                </p>
+              </div>
             </Link>
           </div>
         </div>

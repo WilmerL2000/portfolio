@@ -2,10 +2,10 @@ import React from "react";
 import { Typewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
 import Image from "next/image";
+import { useNextSanityImage } from "next-sanity-image";
 import Link from "next/link";
 import { PageInfo } from "../typings";
 import { sanityClient } from "../sanity";
-import { useNextSanityImage } from "next-sanity-image";
 
 type Props = {
   pageInfo: PageInfo;
@@ -28,7 +28,7 @@ export default function Hero({ pageInfo }: Props) {
         <h2 className="text-sm md:text-2xl uppercase text-gray-500 pb-2 tracking-[15px]">
           {pageInfo?.role}
         </h2>
-        <h1 className="text-2xl md:text-4xl font-semibold px-10">
+        <h1 className="text-xl sm:text-3xl font-semibold px-10">
           <Typewriter
             loop={true}
             cursor
