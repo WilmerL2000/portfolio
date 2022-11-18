@@ -14,6 +14,8 @@ import { fetchPageInfo } from "../utils/fetchPageInfo";
 import { fetchProjects } from "../utils/fetchProjects";
 import { fetchSkills } from "../utils/fetchSkills";
 import { fetchSocials } from "../utils/fetchSocials";
+import { useRouter } from "next/router";
+import ErrorPage from "next/error";
 
 type Props = {
   pageInfo: PageInfo;
@@ -23,6 +25,10 @@ type Props = {
 };
 
 const Home = ({ pageInfo, skills, projects, socials }: Props) => {
+  const router = useRouter();
+  if (!router.isFallback && !pageInfo && !skills && !projects && !socials) {
+    return <ErrorPage statusCode={404} />;
+  }
   return (
     <div
       className="bg-[rgb(36,36,36)] text-white h-screen overflow-scroll 
