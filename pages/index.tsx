@@ -26,7 +26,7 @@ const Home = ({ pageInfo, skills, projects, socials }: Props) => {
   return (
     <div
       className="bg-[rgb(36,36,36)] text-white h-screen overflow-scroll 
-        z-0 overflow-y-scroll overflow-x-hidden snap scrollbar-thin sm:scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#0e7994]/80 scroll-smooth"
+        z-0 overflow-y-scroll overflow-x-hidden scrollbar-thin sm:scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#0e7994]/80 scroll-smooth"
     >
       <Head>
         <title>Wilmer Lopez ~ Desarrollador Web</title>
@@ -62,19 +62,15 @@ const Home = ({ pageInfo, skills, projects, socials }: Props) => {
               <section id="hero">
                 <Hero pageInfo={pageInfo} />
               </section>
-
               <section id="about">
                 <About pageInfo={pageInfo} />
               </section>
-
               <section id="skills">
                 <Skills skills={skills} />
               </section>
-
               <section id="projects">
                 <Projects projects={projects} />
               </section>
-
               <section id="contact">
                 <ContactMe pageInfo={pageInfo} />
               </section>
@@ -84,7 +80,6 @@ const Home = ({ pageInfo, skills, projects, socials }: Props) => {
             <Sidebar socials={socials} />
           </div>
         </div>
-
         <Footer />
       </div>
     </div>

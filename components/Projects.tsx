@@ -30,12 +30,7 @@ export default function Projects({ projects }: Props) {
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1.5 }}
-      className="flex flex-col mt-40 overflow-hidden relative h-screen max-w-full justify-evenly mx-auto items-center z-0"
-    >
+    <div className="flex flex-col mt-48 overflow-hidden relative h-screen max-w-full justify-evenly mx-auto items-center z-0">
       <h3 className=" top-24 uppercase tracking-[18px] text-gray-500 text-2xl">
         Proyectos
       </h3>
@@ -96,6 +91,6 @@ export default function Projects({ projects }: Props) {
         ))}
       </div>
       <div className="w-full absolute top-[20%] bg-[#0e7994]/10 left-0 h-[500px] -skew-y-12"></div>
-    </motion.div>
+    </div>
   );
 }
