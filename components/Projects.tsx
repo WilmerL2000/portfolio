@@ -57,7 +57,7 @@ export default function Projects({ projects }: Props) {
                 className="cursor-pointer"
               >
                 <Image
-                  width={500}
+                  width={580}
                   height={400}
                   onClick={() => filterSelectedProject(project?._id)}
                   src={urlFor(project?.projectImage).url()}
