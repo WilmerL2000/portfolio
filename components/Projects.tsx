@@ -50,7 +50,12 @@ export default function Projects({ projects }: Props) {
               whileHover={{ scale: 1.1 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="cursor-pointer">
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1.5 }}
+                className="cursor-pointer"
+              >
                 <Image
                   width={500}
                   height={400}
@@ -59,7 +64,7 @@ export default function Projects({ projects }: Props) {
                   alt={project?.title}
                   className="rounded-lg"
                 />
-              </div>
+              </motion.div>
               <ModalWindow
                 isOpen={isOpen}
                 closeModal={closeModal}
