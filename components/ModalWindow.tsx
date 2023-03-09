@@ -1,13 +1,13 @@
-import React, { Fragment } from "react";
-import { Dialog, Transition } from "@headlessui/react";
+import React, { Fragment } from 'react';
+import { Dialog, Transition } from '@headlessui/react';
 import {
   XMarkIcon,
   ArrowLongLeftIcon,
   ArrowLongRightIcon,
-} from "@heroicons/react/24/outline";
-import { Project } from "../typings";
-import { SocialIcon } from "react-social-icons";
-import { motion } from "framer-motion";
+} from '@heroicons/react/24/outline';
+import { Project } from '../typings';
+import { SocialIcon } from 'react-social-icons';
+import { motion } from 'framer-motion';
 
 type Props = {
   isOpen: boolean;
@@ -95,7 +95,7 @@ export default function ModalWindow({
                         transition={{ duration: 0.9, delay: 0.9 }}
                         className="text-sm sm:text-lg text-[#0e7994] flex"
                       >
-                        Repositorio
+                        Repository
                       </motion.p>
                     </motion.div>
                     <motion.div
@@ -110,7 +110,7 @@ export default function ModalWindow({
                         transition={{ duration: 0.9, delay: 0.9 }}
                         className="text-sm sm:text-lg text-[#0e7994]"
                       >
-                        Sitio web
+                        Web site
                       </motion.p>
                       <motion.span
                         initial={{ opacity: 0 }}

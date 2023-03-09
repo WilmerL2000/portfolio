@@ -1,11 +1,11 @@
-import React from "react";
-import { Typewriter } from "react-simple-typewriter";
-import BackgroundCircles from "./BackgroundCircles";
-import Image from "next/image";
-import { useNextSanityImage } from "next-sanity-image";
-import Link from "next/link";
-import { PageInfo } from "../typings";
-import { sanityClient } from "../sanity";
+import React from 'react';
+import { Typewriter } from 'react-simple-typewriter';
+import BackgroundCircles from './BackgroundCircles';
+import Image from 'next/image';
+import { useNextSanityImage } from 'next-sanity-image';
+import Link from 'next/link';
+import { PageInfo } from '../typings';
+import { sanityClient } from '../sanity';
 
 type Props = {
   pageInfo: PageInfo;
@@ -36,9 +36,9 @@ export default function Hero({ pageInfo }: Props) {
             cursorColor="#139dc0"
             delaySpeed={3000}
             words={[
-              `Hola, soy ${pageInfo?.name}`,
-              "Guy-who-loves-videogames.tsx",
-              "<ButLovesToCodeMore/>",
+              `Hi, I'm ${pageInfo?.name}`,
+              'Guy-who-loves-videogames.tsx',
+              '<ButLovesToCodeMore/>',
             ]}
           />
         </h1>

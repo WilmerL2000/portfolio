@@ -1,7 +1,7 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { Skill as SkillType } from "../typings";
-import Skill from "./Skill";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Skill as SkillType } from '../typings';
+import Skill from './Skill';
 
 type Props = {
   skills: SkillType[];
@@ -18,10 +18,10 @@ export default function Skills({ skills }: Props) {
       <div className="pl-2 sm:ml-0">
         <div className="mb-12 text-center">
           <h3 className=" top-24 uppercase tracking-[18px] text-gray-500 text-2xl mb-4">
-            Habilidades
+            Skills
           </h3>
           <h3 className=" top-36 uppercase tracking-[3px] text-gray-500 text-sm">
-            Algunas tecnologías y herramientas que he empleado
+            Some technologies and tools that I have used
           </h3>
         </div>
         <div className="grid grid-cols-3 md:grid-cols-7 gap-3 md:gap-8 ml-4 sm:ml-0">

@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import Image from "next/image";
-import { motion } from "framer-motion";
-import { Project } from "../typings";
-import { urlFor } from "../sanity";
-import ModalWindow from "./ModalWindow";
+import React, { useState } from 'react';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { Project } from '../typings';
+import { urlFor } from '../sanity';
+import ModalWindow from './ModalWindow';
 
 type Props = {
   projects: Project[];
@@ -32,10 +32,10 @@ export default function Projects({ projects }: Props) {
   return (
     <div className="flex flex-col mt-48 overflow-hidden relative h-screen max-w-full justify-evenly mx-auto items-center z-0">
       <h3 className=" top-24 uppercase tracking-[18px] text-gray-500 text-2xl">
-        Proyectos
+        Projects
       </h3>
       <p className="text-[#0e7994] text-center mt-4">
-        ¡Haz clic a cualquier imagen para ver mas información!
+        Click on any image to see more information!
       </p>
       <div className="px-10 w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin md:scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#0e7994]/80">
         {projects?.map((project, i) => (
@@ -73,7 +73,7 @@ export default function Projects({ projects }: Props) {
             </motion.div>
             <div className="space-y-3 md:p-2 max-w-5xl">
               <h4 className="text-lg sm:text-2xl font-semibold text-center">
-                Desarrollado con:
+                Developed with:
               </h4>
               <div className="flex items-center space-x-5 justify-center">
                 {project?.technologies.map((technology) => (

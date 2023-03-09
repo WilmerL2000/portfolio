@@ -1,9 +1,9 @@
-import React from "react";
-import { motion } from "framer-motion";
-import Image from "next/image";
-import { useNextSanityImage } from "next-sanity-image";
-import { sanityClient } from "../sanity";
-import { PageInfo } from "../typings";
+import React from 'react';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import { useNextSanityImage } from 'next-sanity-image';
+import { sanityClient } from '../sanity';
+import { PageInfo } from '../typings';
 
 type Props = {
   pageInfo: PageInfo;
@@ -15,7 +15,7 @@ export default function About({ pageInfo }: Props) {
   return (
     <div className="flex flex-col h-screen relative text-center md:text-left md:flex-row max-w-7xl px-1 space-y-6 justify-evenly mx-auto items-center ">
       <h3 className="md:absolute top-24 uppercase tracking-[18px] text-gray-500 text-2xl">
-        Sobre mi
+        About me
       </h3>
       <motion.div
         initial={{ x: -200, opacity: 0 }}
@@ -26,7 +26,7 @@ export default function About({ pageInfo }: Props) {
       >
         <Image
           {...imageProps}
-          alt="Foto sobre mi"
+          alt="About me photo"
           className="rounded-full md:rounded-lg"
         />
       </motion.div>

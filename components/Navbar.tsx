@@ -1,19 +1,19 @@
-import React, { useState } from "react";
-import { SocialIcon } from "react-social-icons";
-import { motion } from "framer-motion";
-import Link from "next/link";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import Image from "next/image";
-import Logo from "../public/Logo2.png";
+import React, { useState } from 'react';
+import { SocialIcon } from 'react-social-icons';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import Image from 'next/image';
+import Logo from '../public/Logo2.png';
 
 type Props = {};
 type Links = { href: string; label: string };
 
 export default function Header({}: Props) {
   const links: Links[] = [
-    { href: "#about", label: "Sobre mi" },
-    { href: "#skills", label: "Habilidades" },
-    { href: "#projects", label: "Proyectos" },
+    { href: '#about', label: 'About me' },
+    { href: '#skills', label: 'Skills' },
+    { href: '#projects', label: 'Projects' },
   ];
 
   const [open, setOpen] = useState(false);
@@ -21,7 +21,7 @@ export default function Header({}: Props) {
   return (
     <header
       className={`sticky top-0 p-3 flex items-start justify-between pr-9 mx-auto z-20 xl:items-center ${
-        open && "h-screen"
+        open && 'h-screen'
       }  backdrop-blur-md backdrop-brightness-75`}
     >
       <motion.div
@@ -44,7 +44,7 @@ export default function Header({}: Props) {
       </div>
       <ul
         className={`sm:flex h-screen sm:h-0 sm:items-center md:pb-0 my-8 absolute sm:static md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 backdrop-blur-md backdrop-brightness-75 ${
-          open ? "top-14 transition-all delay-150" : "top-[-490px]"
+          open ? 'top-14 transition-all delay-150' : 'top-[-490px]'
         } motion-safe:animate-pulse`}
       >
         <li className="sm:ml-12 md:ml-4 text-xl sm:my-0 relative sm:flex sm:flex-row hidden sm:w-auto gap-4 sm:space-y-0">
@@ -80,7 +80,7 @@ export default function Header({}: Props) {
                 transition={{ duration: 0.3 }}
                 className=" heroButton text-center text-sm text-white"
               >
-                Contactarme
+                Contact me
               </motion.p>
             </Link>
           </div>
@@ -101,7 +101,7 @@ export default function Header({}: Props) {
               bgColor="transparent"
             />
             <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
-              Contactarme
+              Contact me
             </p>
           </div>
         </Link>
