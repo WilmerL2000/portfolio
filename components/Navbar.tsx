@@ -100,7 +100,7 @@ export default function Header({}: Props) {
               fgColor="gray"
               bgColor="transparent"
             />
-            <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
+            <p className="hidden md:inline-flex text-sm text-gray-400">
               Contact me
             </p>
           </div>

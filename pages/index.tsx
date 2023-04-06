@@ -1,21 +1,20 @@
-import type { GetStaticProps } from "next";
-import Head from "next/head";
-import Link from "next/link";
-import About from "../components/About";
-import ContactMe from "../components/ContactMe";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
-import Projects from "../components/Projects";
-import Sidebar from "../components/Sidebar";
-import Skills from "../components/Skills";
-import { PageInfo, Project, Skill, Social } from "../typings";
-import { fetchPageInfo } from "../utils/fetchPageInfo";
-import { fetchProjects } from "../utils/fetchProjects";
-import { fetchSkills } from "../utils/fetchSkills";
-import { fetchSocials } from "../utils/fetchSocials";
-import { useRouter } from "next/router";
-import ErrorPage from "next/error";
+import type { GetStaticProps } from 'next';
+import Head from 'next/head';
+import About from '../components/About';
+import ContactMe from '../components/ContactMe';
+import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
+import Projects from '../components/Projects';
+import Sidebar from '../components/Sidebar';
+import Skills from '../components/Skills';
+import { PageInfo, Project, Skill, Social } from '../typings';
+import { fetchPageInfo } from '../utils/fetchPageInfo';
+import { fetchProjects } from '../utils/fetchProjects';
+import { fetchSkills } from '../utils/fetchSkills';
+import { fetchSocials } from '../utils/fetchSocials';
+import { useRouter } from 'next/router';
+import ErrorPage from 'next/error';
 
 type Props = {
   pageInfo: PageInfo;
@@ -35,10 +34,10 @@ const Home = ({ pageInfo, skills, projects, socials }: Props) => {
         z-0 overflow-y-scroll overflow-x-hidden scrollbar-thin sm:scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#0e7994]/80 scroll-smooth"
     >
       <Head>
-        <title>Wilmer Lopez ~ Desarrollador Web</title>
+        <title>Wilmer Lopez ~ Web Developer</title>
         <meta
           name="description"
-          content="Soy un desarrollador web orientado a trabajar inicialmente en el front-end, pero de igual manera me desenvuelvo en el back-end de aplicaciones web."
+          content="I am a web developer oriented to work initially in the front-end, but I also work in the back-end of web applications."
         />
         <link
           rel="/apple-touch-icon"
