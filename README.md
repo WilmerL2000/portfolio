@@ -1,34 +1,159 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<a name="readme-top"></a>
 
-## Getting Started
+<!-- PROJECT LOGO -->
+<div align="center">
+  <h1 align="center">Portfolio</h1>
+    <img src="https://res.cloudinary.com/wils09/image/upload/v1682795987/GitHub/portfiolio/main_rc6rbb.png" width="100%" >
+  <p align="center">
+    <a href="https://wilmerlc.com/" target="_blank">Web Page</a>
+  </p>
+</div>
 
-First, run the development server:
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>
+    <strong>
+        Table of Contents
+    </strong>
+  </summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#tech-stack">Tech Stack</a></li>
+        <li><a href="#features">Features</a></li>
+      </ul>
+    </li>   
+    <li>
+      <a href="#usage">Usage</a>
+      <ul>
+        <li><a href="#desktop">Desktop</a></li>
+        <li><a href="#mobile">Mobile</a></li>
+      </ul>
+    </li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+<!-- ABOUT THE PROJECT -->
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## About The Project
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+As its name says, this project is a clone of TikTok, which has some of the most outstanding features and functionality of the original application.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### Features
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- See the different technologies that I have learned
+- See the different projects that I have developed
+- Click on the images of the projects and obtain more information about them, such as the link to GitHub and the deploy
 
-## Learn More
+### Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+<table>
+    <tr>
+      <td align="center" width="96">          
+        <br><strong>Tech</strong>
+      </td>      
+      <td align="center" width="96">
+          <img src="https://res.cloudinary.com/wils09/image/upload/v1682487162/GitHub/assets/image_20211214122557_0_h9qr5m.png" width="48" height="48" alt="Next.js" />
+        <br><strong>Next.js</strong>        
+      </td>      
+      <td align="center" width="96">
+          <img src="https://res.cloudinary.com/wils09/image/upload/v1682487163/GitHub/assets/react_original_logo_icon_146374_whazfv.png" width="full" height="48" alt="React" />
+        <br><strong>React</strong>        
+      </td>      
+      <td align="center" width="96">
+          <img src="https://res.cloudinary.com/wils09/image/upload/v1682487162/GitHub/assets/file_type_typescript_official_icon_130107_svjybp.png" width="48" height="48" alt="TypeScript" />
+        <br><strong>TypeScript</strong>        
+      </td>      
+      <td align="center" width="96">
+          <img src="https://res.cloudinary.com/wils09/image/upload/v1682487162/GitHub/assets/file_type_tailwind_icon_130128_mwu7ie.png" width="48" height="48" alt="Tailwind CSS" />
+        <br><strong>Tailwind CSS</strong>        
+      </td>          
+      <td align="center" width="96">
+          <img src="https://res.cloudinary.com/wils09/image/upload/v1682487163/GitHub/assets/sanity_je2by8.png" width="48" height="48" alt="Sanity" />
+        <br><strong>Sanity</strong>        
+      </td>    
+      <td align="center" width="96">
+          <img src="https://res.cloudinary.com/wils09/image/upload/v1682796276/GitHub/assets/framer-motion_b7kskd.svg" width="48" height="48" alt="Sanity" />
+        <br><strong>Framer Motion</strong>        
+      </td>    
+    </tr>
+     <tr>
+      <td align="center" width="96">          
+        <br><strong>Version</strong>
+      </td>      
+      <td align="center" width="96">
+        <br>12.3.1
+      </td>      
+      <td align="center" width="96">
+        <br>18.2.0
+      </td>      
+      <td align="center" width="96">
+        <br>4.8.4
+      </td>      
+      <td align="center" width="96">
+        <br>3.1.8
+      </td>          
+      <td align="center" width="96">
+        <br>2.34.0
+      </td>     
+      <td align="center" width="96">
+        <br>7.5.3
+      </td>     
+    </tr>
+  </table>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<!-- USAGE EXAMPLES -->
 
-## Deploy on Vercel
+## Usage
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Desktop
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<div align="center">
+  <div>
+    <h3>About</h3>
+    <img src="https://res.cloudinary.com/wils09/image/upload/v1682795986/GitHub/portfiolio/about_aisdjq.png" width="100%" >
+  </div>
+  <div>
+    <h3>Skills</h3>
+    <img src="https://res.cloudinary.com/wils09/image/upload/v1682795987/GitHub/portfiolio/skills_moy7tn.png" width="100%" >
+  </div>
+  <div>
+    <h3>Projects</h3>
+    <img src="https://res.cloudinary.com/wils09/image/upload/v1682795987/GitHub/portfiolio/projects_x6sowd.png" width="100%" >
+  </div>
+  <div>
+    <h3>Contact</h3>
+    <img src="https://res.cloudinary.com/wils09/image/upload/v1682795985/GitHub/portfiolio/contact_anhn90.png" width="100%" >
+  </div>
+</div>
+
+### Mobile
+
+<div align="center">
+  <div>
+    <img src="https://res.cloudinary.com/wils09/image/upload/v1682795986/GitHub/portfiolio/mobile1_tvyjgh.png" width="100%" >
+  </div>
+  <div>
+    <img src="https://res.cloudinary.com/wils09/image/upload/v1682795987/GitHub/portfiolio/mobile2_ej5435.png" width="100%" >
+  </div>
+  <div>
+    <img src="https://res.cloudinary.com/wils09/image/upload/v1682795987/GitHub/portfiolio/mobile3_mhee7i.png" width="100%" >
+  </div>
+</div>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTACT -->
+
+## Contact
+
+`Wilmer Lopez Cespedes`
+
+- Correo: wilmerlopezcespedes@gmail.com
+- <a href="https://www.linkedin.com/in/wilmer-lopez-cespedes/" target="_blank">LinkedIn</a>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
