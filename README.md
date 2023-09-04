@@ -39,7 +39,7 @@
 
 ## About The Project
 
-As its name says, this project is a clone of TikTok, which has some of the most outstanding features and functionality of the original application.
+This is my personal portfolio where you can learn a little more about me, the skills or technologies that I have used and the projects that I have developed.
 
 ### Features
 
